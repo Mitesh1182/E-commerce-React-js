@@ -1,0 +1,48 @@
+body{
+    font-family: "popins"
+}
+.cart-edit{
+    width: 29px;
+    color: #4b4848;
+}
+.cart{
+  gap: 25px;
+}
+.Logo-edit{
+    font-size: 35px;
+    font-weight: 500;
+    color: black;
+    font-family: cursive;
+}
+.nav-category   {
+    max-height: 100px;
+    margin-left: 163px;
+    font-size: 18px;
+}
+.Count-item{
+    background-color: red;
+    padding: 3px 7px;
+    border-radius: 12px;
+    margin-left: -31px;
+    font-size: 12px;
+    color: white;
+    margin-top: -2px;
+}
+Nav Nav.Link{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+/* .nav-category hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: rgb(233, 42, 42);
+} */
+.nav-button{
+    padding: 6px 30px;
+    border-radius: 16px;
+}

@@ -1,0 +1,7 @@
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: block;
+  color: rgb(112, 255, 112);
+}

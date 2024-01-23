@@ -6,13 +6,18 @@ import Shopcategory from './Pages/Shopcategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignUp from './Pages/LoginSignUp';
+import Slidebar from './Pages/Slidebar';
+
 
 
 function App() {
   return (
     <div >
+   
       <BrowserRouter>
+ 
         <NavbarSite />
+        <Slidebar/>
         <Routes>
           <Route path='/' element={<Shop/>}/>
           <Route path='/Mens' element={<Shopcategory category="men"/>}/>
@@ -24,8 +29,10 @@ function App() {
           </Route>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/LoginSignUp' element={<LoginSignUp/>}/>
-
+            
+        
         </Routes>
+       
       </BrowserRouter>
     </div>
   );

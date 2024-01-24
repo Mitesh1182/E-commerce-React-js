@@ -18,7 +18,7 @@ const NavbarSite = () => {
                     <Nav className="nav-category me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px',fontWeight:'400'}}
                         navbarScroll >
-                        <Nav.Link href="#action1"style={{color:"black"}} ><Link to='/' style={{textDecoration:'none',color:'black'}}>Shop</Link>  </Nav.Link>
+                        <Nav.Link href="#action1"style={{color:"black"}} ><Link to='/Shop' style={{textDecoration:'none',color:'black'}}>Shop</Link>  </Nav.Link>
                         <Nav.Link href="#action2" style={{color:"black"}}><Link to='/mens' style={{textDecoration:'none',color:'black'}}> Men</Link></Nav.Link>
                         <Nav.Link href="#action3" style={{color:"black"}}><Link to='/womens' style={{textDecoration:'none',color:'black'}}>Woman</Link> </Nav.Link>
                         <Nav.Link href="#action4" style={{color:"black"}}><Link to='/Kids' style={{textDecoration:'none',color:'black'}}> Kids</Link></Nav.Link>

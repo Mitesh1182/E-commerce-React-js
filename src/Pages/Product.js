@@ -32,7 +32,7 @@ const ProductList = () => {
             Product.map((v) => {
               return(
                 
-                <Card style={{ width: '18rem', padding: ' 18px 33px' }}>
+                <Card className='card-edit'>
                 <Card.Img variant="top" style={{width: '170px', height: '230px'}} src={v.image} />
                 <Card.Body>
                   <Card.Title>{v.title}</Card.Title>

@@ -2,4 +2,12 @@
 .col-sm-4{
     display: grid;
     grid-template-columns: auto auto auto auto; 
+    gap: 25px;
+}
+
+.card-edit{
+    text-align: center;
+    filter: drop-shadow(black 2px 4px 6px);
+    width: 250px;
+    height: 446px;
 }

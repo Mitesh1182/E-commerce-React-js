@@ -1,46 +1,35 @@
 import './App.css';
-import NavbarSite from './Componant/Navbarpage/NavbarSite';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Shop from './Pages/Shop';
 import Shopcategory from './Pages/Shopcategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import LoginSignUp from './Pages/LoginSignUp';
-import Slidebar from './Pages/Slidebar';
 import { useRoutes } from "react-router-dom";
+import Womanproduct from './Pages/Womanproduct';
+import KidsProduct from './Pages/KidsProduct';
+import Populer from './Componant/Populer/Populer';
 
 
 
-function App() {
+export default function App() {
 
 
   let element = useRoutes([
-    <NavbarSite/>,
     {
       path: "/",
-      element: <NavbarSite/>,
-      children: [       
-      ],
-    },
-    {
-      path: "/Shop",
       element: <Shop />,
     },
     {
-      path: "/Slidebar",
-      element: <Slidebar />,
-    },
-    {
       path: "Mens",
-      element: <Shopcategory category="men" />,
+      element: <Populer/>,
     },
     {
-      path: "women",
-      element: <Shopcategory category="women" />,
+      path: "Womanproduct",
+      element: <Womanproduct/>,
     },
     {
-      path: "Kids",
-      element: <Shopcategory category="kid" />,
+      path: "KidsProduct",
+      element: <KidsProduct/>,
     },
     {
       path: "Product",
@@ -83,5 +72,3 @@ function App() {
     // </div>
   );
 }
-
-export default App;

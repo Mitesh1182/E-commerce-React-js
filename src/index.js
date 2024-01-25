@@ -8,13 +8,19 @@ import { Provider } from 'react-redux';
 import store from './Redux/Store';
 import Product from './Pages/Product';
 import { BrowserRouter } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarSite from './Componant/Navbarpage/NavbarSite';
+import Hero from './Componant/Hero/HEro';
+<script
+  src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
+  crossorigin></script>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-
+      <NavbarSite/>
       <App/>
       </BrowserRouter>
     </Provider>

@@ -11,6 +11,7 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarSite from './Componant/Navbarpage/NavbarSite';
 import Hero from './Componant/Hero/HEro';
+import Footer from './Pages/Footer';
 <script
   src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
   crossorigin></script>
@@ -22,6 +23,7 @@ root.render(
       <BrowserRouter>
       <NavbarSite/>
       <App/>
+      <Footer/>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

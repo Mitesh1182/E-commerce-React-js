@@ -20,9 +20,10 @@ const ProductList = () => {
  
  
   return (
-    <Container>
+    <Container >
+      
 
-      <div>
+      <div className='fulldiv-Edit'>
         {isLoading && <div>Loading</div>}
         {error && <div>{error}</div>}
         {Product && (
@@ -33,9 +34,9 @@ const ProductList = () => {
 
                   <Card className='card-edit'>
                     <Card.Img variant="top" style={{ width: '90%', height: '330px' }} src={v.image} />
-                    <Card.Body className='card-body-edit'>
-                      <Card.Title>{v.title}</Card.Title>
-                      <Card.Title>{v.price}</Card.Title>
+                    <Card.Body className='card-body-edit' style={{bordercolor: '#80acac'}}>
+                      <Card.Title style={{color:'#3f3d3d'}}>{v.title}</Card.Title>
+                      <Card.Title className='Price-card-edit'>$. {v.price}</Card.Title>
                       {/* <Card.Text>{v.description}</Card.Text> */}
                       <Button variant='unset' ><span className='card-button-edit'> Add to Cart</span></Button>
                     </Card.Body>

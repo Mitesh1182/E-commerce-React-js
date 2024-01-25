@@ -2,7 +2,7 @@ import './App.css';
 import Shop from './Pages/Shop';
 import Shopcategory from './Pages/Shopcategory';
 import Product from './Pages/Product';
-import Cart from './Pages/Cart';
+
 import LoginSignUp from './Pages/LoginSignUp';
 import { useRoutes } from "react-router-dom";
 import Womanproduct from './Pages/Womanproduct';
@@ -33,15 +33,15 @@ export default function App() {
     },
     {
       path: "Product",
-      element: <Product />,
-    },
-    {
-      path: "cart",
-      element: <Cart />,
+      element: <Product/>,
     },
     {
       path: "LoginSignUp",
       element: <LoginSignUp />
+    },
+    {
+      path: "Populer",
+      element: <Populer/>
     },
   ]);
   return (

@@ -2,15 +2,17 @@ import React from 'react'
 import ProductList from './Product'
 import Hero from '../Componant/Hero/HEro'
 import Populer from '../Componant/Populer/Populer'
+import '../Pages/Product.css';
+
 
 const Shop = () => {
   return (
     <div>
       <Hero/>
-      <h2>
+      <h2 className='heading-edit'>
          Trending Product
-         <hr/>
       </h2>
+         <hr/>
       <ProductList/>
       </div>
   )

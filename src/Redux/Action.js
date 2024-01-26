@@ -20,7 +20,7 @@ export const feachProductFailure = (error) => ({
 export const fetchProduct = ()=>{
     return(dispatch) =>{
         dispatch(feachProductRequest());
-        fetch('https://fakestoreapi.com/products')
+        fetch('https://fakestoreapi.com/products?limit=8')
         .then((response)=> response.json())
         .then((data)=>{
             const Product = data.map((value)=>{

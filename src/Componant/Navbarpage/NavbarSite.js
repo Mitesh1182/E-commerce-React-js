@@ -33,7 +33,8 @@ const NavbarSite = () => {
 
                     </Nav>
                     <Form className="d-flex cart">
-                        <Link to='/LoginSignUp'><Button style={{ padding: "6px 30px" }} className="nav-button" variant="outline-success" >Login</Button></Link>
+                        <Link to='/SignUp'><Button style={{ padding: "6px 30px" }} className="nav-button" variant="outline-success" >SignUp</Button></Link>
+                        <Link to='/Login'><Button style={{ padding: "6px 30px" }} className="nav-button" variant="outline-success" >Login</Button></Link>
                         <Link onClick={handleShow}><img className='cart-edit' src={Logo} alt='' /></Link>
                         <p className='Count-item'>0</p>
                         <Offcanvas show={show} onHide={handleClose}>

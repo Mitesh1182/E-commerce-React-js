@@ -1,13 +1,12 @@
 import './App.css';
 import Shop from './Pages/Shop';
-import Shopcategory from './Pages/Shopcategory';
 import Product from './Pages/Product';
-
-import LoginSignUp from './Pages/LoginSignUp';
 import { useRoutes } from "react-router-dom";
 import Womanproduct from './Pages/Womanproduct';
 import KidsProduct from './Pages/KidsProduct';
 import Populer from './Componant/Populer/Populer';
+import SignUp from './Pages/SignUp';
+import Login from './Pages/Login';
 
 
 
@@ -36,8 +35,12 @@ export default function App() {
       element: <Product/>,
     },
     {
-      path: "LoginSignUp",
-      element: <LoginSignUp />
+      path: "SignUp",
+      element: <SignUp />
+    },
+    {
+      path: "Login",
+      element: <Login />
     },
     {
       path: "Populer",

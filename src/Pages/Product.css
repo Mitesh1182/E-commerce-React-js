@@ -45,7 +45,17 @@
 }
 .Singup-page-edit{
     width: 650px;
-    height: 487px;
+    height: auto;
+    border: 1px double #c6c6c6;
+    padding: 20px 22px;
+    margin-top: 37px;
+    margin-bottom: 66px;
+    margin-inline: auto;
+    border-radius: 11px;
+}
+.Login-div-edit{
+    width: 650px;
+    height: auto;
     border: 1px double #c6c6c6;
     padding: 20px 22px;
     margin-top: 37px;

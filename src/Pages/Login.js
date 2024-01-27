@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
+import '../Pages/Product.css';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
@@ -14,13 +16,14 @@ const Login = () => {
     if (validate()) {
       // console.log("Proceed");
     }
-   axios.post("https://api.escuelajs.co/api/v1/users", {
-    name : name,
+   axios.post('https://real-pear-fly-kilt.cyclic.app',{
+    email : email,
     password: password
    })
   .then((response) => {
       if (Object.keys(response).length === 0) {
-        alert("Please enter Valid name")
+        alert("Please enter Valid email")
+        localStorage.setItem("userInfo",JSON.stringify(response.email, response.password));
       } else {
         if (response.password === password) {
           alert("Login succesfully")
@@ -36,9 +39,9 @@ const Login = () => {
 
   const validate = () => {
     let result = true;
-    if (name === "" || name === null) {
+    if (email === "" || email === null) {
       result = false;
-      alert("Please Enter Your Name")
+      alert("Please Enter Your email")
     }
     if (password === "" || password === null) {
       result = false;
@@ -48,11 +51,11 @@ const Login = () => {
 
   }
   return (
-    <div>
+    <div className='Login-div-edit'>
       <Form onSubmit={ProceedLogin}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
-          <Form.Label>Name</Form.Label>
-          <Form.Control value={name} onChange={e => setName(e.target.value)} type="text" placeholder="Enter Name" />
+          <Form.Label>email</Form.Label>
+          <Form.Control value={email} onChange={e => setEmail(e.target.value)} type="Email" placeholder="Enter email" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formGroupPassword">
           <Form.Label>Password</Form.Label>

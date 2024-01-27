@@ -7,6 +7,7 @@ import KidsProduct from './Pages/KidsProduct';
 import Populer from './Componant/Populer/Populer';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
+import ProductDisplay from './Componant/ProductDisplay/ProductDisplay';
 
 
 
@@ -33,6 +34,10 @@ export default function App() {
     {
       path: "Product",
       element: <Product/>,
+    },
+    {
+      path: "ProductDisplay",
+      element: <ProductDisplay/>,
     },
     {
       path: "SignUp",

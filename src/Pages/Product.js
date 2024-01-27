@@ -6,20 +6,21 @@ import { fetchProduct } from '../Redux/Action';
 import '../Pages/Product.css'
 import Container from 'react-bootstrap/esm/Container';
 import '../Redux/spinner.css';
+import { Link } from 'react-router-dom';
 
 const ProductList = () => {
 
   const dispatch = useDispatch();
   const { Product, isLoading, error } = useSelector((state) => state)
-
-  console.log(Product)
-  console.log(isLoading)
+  
+  console.log(Product);
   useEffect(() => {
     dispatch(fetchProduct());
   }, [dispatch]);
  
  
   return (
+    
     <Container >
       
 
@@ -31,9 +32,8 @@ const ProductList = () => {
             {
               Product.map((v) => {
                 return (
-
                   <Card className='card-edit'>
-                    <Card.Img variant="top" style={{ width: '90%', height: '330px' }} src={v.image} />
+                    <Link to={'/ProductDisplay'}><Card.Img variant="top" style={{ width: '90%', height: '330px' }} src={v.image} /></Link>
                     <Card.Body className='card-body-edit' style={{bordercolor: '#80acac'}}>
                       <Card.Title style={{color:'#3f3d3d'}}>{v.title}</Card.Title>
                       <Card.Title className='Price-card-edit'>$. {v.price}</Card.Title>
@@ -41,6 +41,7 @@ const ProductList = () => {
                       <Button variant='unset' ><span className='card-button-edit'> Add to Cart</span></Button>
                     </Card.Body>
                   </Card>
+      
                 )
 
               })
@@ -48,6 +49,7 @@ const ProductList = () => {
           </ul>
         )}
       </div>
+      
     </Container>
   );
 }

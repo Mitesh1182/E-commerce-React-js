@@ -15,16 +15,17 @@ const haldleSubmit = (e)=>{
   e.preventDefault();
   let result = {email,password,name}
   console.log(result)
-  fetch("https://fakestoreapi.com/users",{
+  fetch("http://localhost:4000/accounts/register",{
     method:"POST",
     headers:{'content-type':'application/json'},
     body: JSON.stringify(result)
   })
   .then((res)=>{
     alert('Regitrated succesfully');
+    console.log(res);
 
   }).catch((error)=>{
-    alert('Failed');
+    alert('Failed:' +error);
   })
 }
 

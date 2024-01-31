@@ -36,6 +36,10 @@ export default function App() {
       element: <Product/>,
     },
     {
+      path: ":productId",
+      element: <ProductDisplay/>,
+    },
+    {
       path: "ProductDisplay",
       element: <ProductDisplay/>,
     },

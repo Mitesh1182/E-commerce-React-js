@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useParams } from 'react-router-dom';
+import ProductDisplay from '../Componant/ProductDisplay/ProductDisplay';
 import ProductList from './Product';
+import store from '../Redux/Store';
 
-function ContexOfcomponent () {
+const ContexOfcomponent = () => {
+  const {all_products}=useContext(store);
+  const {productId} = useParams();
+  const product = all_products.find((e)=>e.id === Number(productId))
   return (
-    <>
-    <ProductList />
-    
-    </>
+    <div>
+      
+
+    </div>
   )
 }
 
-export default ContexOfcomponent;
+export default ContexOfcomponent

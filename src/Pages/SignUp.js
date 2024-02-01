@@ -4,34 +4,51 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import '../Pages/Product.css';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
   const [email, setEmail]=useState("");
   const [password, setPassword]=useState("");
   const [name, setName]=useState("");
-
+  const navigate = useNavigate();
 const haldleSubmit = (e)=>{
   e.preventDefault();
-  let result = {email,password,name}
-  console.log(result)
-  fetch("http://localhost:4000/accounts/register",{
-    method:"POST",
-    headers:{'content-type':'application/json'},
-    body: JSON.stringify(result)
-  })
-  .then((res)=>{
-    alert('Regitrated succesfully');
-    console.log(res);
-
-  }).catch((error)=>{
-    alert('Failed:' +error);
-  })
+  // localStorage.setItem('email', email);
+  // localStorage.setItem('password', password);
+  validate();
+  
+  if(localStorage.setItem('email', email) ,localStorage.setItem('password', password) === email, password){
+    
+    navigate("/Login")
+  }else{
+  }
 }
 
+const validate = () => {
+  let result = true;
+  if (email === "" || email === null) {
+    result = false;
+    toast.error("Please Enter Your email")
+    // alert("Please Enter Your email")
+  }
+  if (password === "" || password === null) {
+    result = false;
+    toast.error("Please Enter Your password")
+    // alert("Please Enter Your password")
+  }
+  if (name === "" || name === null) {
+    result = false;
+    toast.error("Please Enter Your name")
+    // alert("Please Enter Your password")
+  }
+  return result;
+
+}
   
   return (
-
+    
     <div className='Singup-page-edit'>
       
       <Form onSubmit={haldleSubmit}>

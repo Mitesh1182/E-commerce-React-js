@@ -10,6 +10,8 @@ import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarSite from './Componant/Navbarpage/NavbarSite';
 import Footer from './Pages/Footer';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 <script
   src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
   crossorigin></script>
@@ -19,6 +21,7 @@ root.render(
   <React.StrictMode>
        <Provider store={store}>
       <BrowserRouter>
+      <ToastContainer/>
       <NavbarSite/>
       <App/>
       <Footer/>
